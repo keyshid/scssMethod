@@ -1,0 +1,11 @@
+$html-font-size: 16vw;
+@use 'sass:math';
+@function get-vw($target) {
+  $vw-context: (1400 * 0.01) * 1px;
+  @return math.div($target, $vw-context) * 1vw;
+}
+
+@function get-vh($target) {
+  $vh-context: (700 * 0.01) * 1px; // Adjust the 900 to your desired height for the context.
+  @return math.div($target, $vh-context) * 1vh;
+}
